@@ -58,18 +58,18 @@ int main() {
     int mat[m][n]; // 2D array to store the matrix elements
     cout << "Enter matrix elements" << endl;
 
-    LinkedList ll; // Creating an instance of LinkedList
+    LinkedList linkedList; // Creating an instance of LinkedList
 
     // Reading matrix elements and inserting non-zero elements into the linked list
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {
             cin >> mat[i][j];
             if (mat[i][j] != 0) {
-                ll.insert(i, j, mat[i][j]); // Inserting non-zero elements
+            	linkedList.insert(i, j, mat[i][j]); // Inserting non-zero elements
             }
         }
     }
 
     // Displaying the sparse matrix representation
-    ll.printList();
+    linkedList.printList();
 }
